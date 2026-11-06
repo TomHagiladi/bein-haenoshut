@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>בין האנושות לבינה המלאכותית - תום הגלעדי</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+:root{--paper:#F7F2E8;--ink:#2F2A24;--muted:#7A6F62;--line:#E3D9C6;--green:#4F7F2A;--green-l:#75B743;--green-pale:#EEF4E6;
+--red:#AF242A;--teal:#2D5C63;--teal-pale:#E3ECEA;--dark:#1F2A2C}
+h1{font-weight:800;font-size:62px;line-height:1.16;color:var(--green)}
+h1.q{font-size:66px}
+h2{font-weight:800;font-size:46px;line-height:1.2;margin-bottom:16px;color:var(--green)}
+h3{font-weight:800;font-size:28px;color:var(--ink);margin:8px 0}
+p,li{font-size:27px;line-height:1.5;font-weight:300}
+.lead{font-size:34px;line-height:1.45}
+.sub{font-size:22px;color:var(--muted);margin:-8px 0 10px}
+.para{font-size:24px;line-height:1.5;margin:0 0 12px}
+.kicker{font-size:21px;letter-spacing:2px;color:var(--teal);font-weight:700;margin-bottom:10px}
+.rule{width:80px;height:5px;background:var(--red);margin:18px 0 22px;border-radius:3px}
+.r{color:var(--red);font-weight:700}
+.dim{color:var(--muted)}
+.en{direction:ltr;unicode-bidi:isolate}
+.center{text-align:center}
+.closing{font-size:32px;font-weight:700;margin-top:18px;line-height:1.4}
+.after{font-size:28px;font-weight:700;text-align:center;margin-top:10px}
+ul{list-style:none}
+ul.dots li{position:relative;padding-right:40px;margin:14px 0}
+ul.dots li:before{content:"";position:absolute;right:4px;top:17px;width:13px;height:13px;border:3px solid var(--green-l);transform:rotate(24deg);border-radius:2px}
+.shadow{box-shadow:0 8px 26px rgba(0,0,0,.14);border-radius:6px}
+.src{position:absolute;bottom:14px;right:72px;left:72px;font-size:13px;line-height:1.45;color:var(--muted);border-top:1px solid var(--line);padding-top:6px}
+.title-logo{width:300px;margin-bottom:26px}
+.title-split .tx{flex:1}
+.logos{display:flex;align-items:flex-end;justify-content:center;gap:56px}
+.logos img{display:block}
+.tl3{display:flex;gap:22px;margin-top:14px}
+.stage{flex:1;background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:20px 22px;position:relative}
+.stage .yr{display:inline-block;background:var(--teal);color:#fff;font-weight:800;font-size:22px;border-radius:20px;padding:2px 16px}
+.stage p{font-size:23px}
+.stage.now{border:3px solid var(--red)}
+.stage.now .yr{background:var(--red)}
+.vid .vidwrap{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.vidwrap video{max-width:100%;max-height:100%;border-radius:6px;background:#000}
+.vid2{display:flex;gap:26px;flex:1;min-height:0}
+.vid2 .vidwrap{flex:1}
+.vd{flex:1.25;display:flex;align-items:center;justify-content:center;min-width:0}
+.vd video{max-width:100%;max-height:500px;border-radius:6px;background:#000}
+.wall{display:grid;gap:16px;flex:1;min-height:0;margin-top:4px}
+.wall.c2{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
+.wall.c3{grid-template-columns:1fr 1fr 1fr;grid-template-rows:1fr 1fr}
+.wall .tall{grid-row:span 2}
+.shot{background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.08);display:flex;flex-direction:column;overflow:hidden;min-height:0}
+.shot img{flex:1;min-height:0;width:100%;object-fit:contain;background:#fff}
+.shot .cap{font-size:15px;color:var(--muted);padding:5px 10px;border-top:1px solid var(--line)}
+/* slide 2.3 numbers: 2x2, filling the slide (Tom 6.11: too much empty space) */
+.stats{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:22px;margin-top:8px;flex:1;min-height:0}
+.stat{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:14px 24px;text-align:center;
+ display:flex;flex-direction:column;align-items:center;justify-content:center}
+.stat b{display:block;font-size:108px;font-weight:800;color:var(--green);line-height:1}
+.stat.red b{color:var(--red)}
+.stat span{font-size:33px;margin-top:10px;line-height:1.3}
+.slide[data-sn="2.3"] .closing{font-size:36px;margin-top:20px}
+/* slide 1.2 "nice to meet you": large logos (Tom 6.11) */
+.meet{flex:1;min-height:0;display:grid;grid-template-columns:auto auto auto;grid-template-rows:1fr 1fr;gap:24px 48px;
+ align-items:center;justify-content:center;justify-items:center}
+.meet img{display:block}
+.meet .m-pod{grid-row:1/3;width:370px;border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,.10)}
+.meet .m-book{grid-row:1/3;height:500px;box-shadow:0 12px 30px rgba(0,0,0,.20)}
+.meet .m-sho,.meet .m-pis{width:340px}
+/* slide 2.4: larger text (Tom 6.11) */
+.split.big>.tx{flex:1.15}
+.split.big>.im{flex:1.2}
+.split.big h2{font-size:56px}
+.split.big ul.dots li{font-size:34px;line-height:1.42;margin:20px 0}
+.split.big ul.dots li:before{top:20px}
+/* portrait clips: full height on one half, words on the other (Tom 6.11) */
+.slide.vert{padding-top:26px;padding-bottom:26px}
+.vsplit{display:flex;gap:56px;flex:1;min-height:0;align-items:center}
+.vsplit>.tx{flex:1;min-width:0}
+.vsplit>.tx h2{font-size:58px;line-height:1.18}
+.vsplit>.tx .sub{font-size:26px;margin:4px 0 0;line-height:1.45}
+.vsplit>.tx .after{text-align:right;font-size:30px;margin-top:22px}
+.vsplit>.tx ul.dots li{font-size:28px;margin:12px 0}
+.vv{height:100%;display:flex;align-items:center;justify-content:center;gap:20px}
+.vv video{height:100%;width:auto;max-width:100%;border-radius:8px;background:#000;display:block}
+.vv.two video{height:min(612px,100%)}
+.pair-note{font-size:26px;color:var(--muted);margin-top:14px}
+/* a text-only slide (7.10 after its image's point was removed, Tom 6.11) */
+.solo{flex:1;display:flex;flex-direction:column;justify-content:center;max-width:1040px}
+.solo ul.dots li{font-size:40px;line-height:1.4;margin:28px 0;padding-right:52px}
+.solo ul.dots li:before{top:22px;width:17px;height:17px}
+/* slide 9.3: the text page large */
+.split.phd>.im{flex:1.1}
+.split.phd>.im img.phd-text{height:100%;width:auto;max-width:100%;object-fit:contain}
+.phd-cover{display:block;height:170px;margin-top:26px;border-radius:4px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.bars{display:flex;flex-direction:column;gap:22px;margin-top:6px}
+.grp .gt{font-size:24px;font-weight:700;color:var(--teal);margin-bottom:4px}
+.grp .gd{font-size:19px;color:var(--muted);line-height:1.4;margin-bottom:6px}
+.bars .row{display:flex;align-items:center;gap:16px;margin:8px 0}
+.bars .lab{width:360px;font-size:22px}
+.bars .track{flex:1;height:38px;background:var(--teal-pale);border-radius:6px;overflow:hidden}
+.bars .fill{height:100%;background:#9DB59A;color:#fff;font-weight:800;display:flex;align-items:center;padding:0 12px;font-size:21px;width:0;transition:width 1.1s ease}
+.bars .fill.hi{background:var(--green)}
+.f.vis .fill,body.qa .fill{width:var(--w)}
+.cards3{display:flex;gap:22px;margin-top:16px}
+.card{flex:1;background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:22px 24px}
+.card h4{font-size:28px;font-weight:800;color:var(--teal);margin-bottom:8px}
+.card p{font-size:23px}
+.split{display:flex;gap:40px;flex:1;min-height:0;align-items:center}
+.split.flip{flex-direction:row-reverse}
+.split>.tx{flex:1;min-width:0}
+.split>.tx.col{display:flex;flex-direction:column;align-items:center;text-align:center}
+.split>.im{flex:1.45;min-width:0;align-self:stretch;display:flex;align-items:center;justify-content:center;position:relative}
+.split>.im img{max-width:100%;max-height:100%;object-fit:contain;border-radius:4px}
+.im.two{gap:16px}
+.im.two img{max-width:48%}
+.wide-im{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.wide-im img{max-width:100%;max-height:100%;object-fit:contain}
+.tools3{display:flex;gap:60px;align-items:center;justify-content:center;flex:1}
+.tools3 img{max-height:260px;max-width:300px;border-radius:12px}
+.quote{font-size:38px;font-weight:700;line-height:1.4;margin-top:16px}
+.paths{display:flex;gap:26px;margin-top:12px}
+.path{flex:1;border-radius:12px;padding:22px 26px;background:#fff;border:2px solid var(--line)}
+.path h4{font-size:30px;font-weight:800;margin-bottom:10px}
+.path li{font-size:23px;margin:6px 0}
+.path .res{margin-top:12px;font-size:25px;font-weight:800}
+.path.short{background:#F1EEE8}
+.path.short h4,.path.short .res{color:var(--muted)}
+.path.think{border-color:var(--green-l);background:var(--green-pale)}
+.path.think h4,.path.think .res{color:var(--green)}
+.huge{font-size:42px;font-weight:800;line-height:1.3;margin-top:8px}
+.big-q{font-size:66px;font-weight:800;line-height:1.3;color:var(--paper);text-align:center}
+.slide.dark{background:var(--dark)}
+.wide-im.story img{border-radius:6px}
+/* speech bubble placed ON the image, above the girl, tail pointing at her (Tom 6.11) */
+.bub-wrap{position:relative;width:100%}
+.bub-wrap img{display:block;width:100%;height:auto;border-radius:4px}
+.bubble{position:absolute;top:3%;left:27%;width:36%;background:#fff;border:2.5px solid var(--ink);border-radius:18px;padding:8px 14px;
+ font-size:21px;font-weight:700;line-height:1.3;text-align:center;box-shadow:0 6px 16px rgba(0,0,0,.15)}
+.bubble:after{content:"";position:absolute;bottom:-15px;left:22%;border-style:solid;border-width:15px 9px 0 9px;border-color:var(--ink) transparent transparent transparent}
+.ph{width:100%;height:100%;min-height:360px;border:2px dashed #c9bda8;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--muted);background:#F2EBDD;text-align:center;padding:24px}
+.ph b{font-size:26px;color:var(--ink)}
+.ph small{font-size:17px;margin-top:8px;line-height:1.5}
+/* separators */
+.slide.sep{background:var(--teal);color:#fff;justify-content:center}
+.sep h2{color:#fff;font-size:56px;margin-bottom:6px}
+.sep h2 .r{color:#FFD6C9}
+.sepsub{font-size:28px;color:#D7E7E4;margin-bottom:18px}
+.septx{position:relative;z-index:2;max-width:760px}
+.agenda{display:flex;flex-direction:column;gap:10px;margin-top:18px}
+.agenda .it{display:flex;align-items:center;gap:16px;font-size:28px;color:rgba(255,255,255,.55)}
+.agenda .it .n{font-size:18px;font-weight:800;min-width:34px;color:rgba(255,255,255,.55)}
+.agenda .it.act{color:#fff;font-weight:800}
+.agenda .it.act .n{color:#FFD6C9}
+.agenda .it.act:after{content:"";width:14px;height:14px;background:#fff;border:3px solid var(--red);transform:rotate(24deg);border-radius:2px}
+.logo-card{position:absolute;top:36px;left:60px;background:#fff;border-radius:10px;padding:10px 16px;z-index:3}
+.logo-card img{width:170px;display:block}
+.sq-art{position:absolute;left:40px;bottom:30px;width:420px;height:400px;z-index:1}
+.sq-art i{position:absolute;display:block;border-radius:6px}
+.sq-art .s1{width:170px;height:170px;left:30px;top:150px;background:#fff;opacity:.92;transform:rotate(24deg)}
+.sq-art .s2{width:110px;height:110px;left:250px;top:90px;background:var(--red);transform:rotate(-14deg)}
+.sq-art .s3{width:140px;height:140px;left:210px;top:240px;border:12px solid #fff;transform:rotate(38deg)}
+.sq-art .s4{width:72px;height:72px;left:40px;top:40px;background:var(--green-l);transform:rotate(12deg)}
+.sq-art .s5{width:54px;height:54px;left:340px;top:330px;background:#C9E3B1;transform:rotate(-30deg)}
+
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#2E2D2A;overflow:hidden;font-family:'Heebo','Segoe UI',Arial,sans-serif}
+#stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+#deck{width:1280px;height:720px;flex:0 0 1280px;position:relative;transform-origin:center center;overflow:hidden;background:var(--paper);box-shadow:0 24px 80px rgba(0,0,0,.55)}
+.slide{position:absolute;inset:0;padding:44px 72px 64px;display:none;flex-direction:column;background:var(--paper);color:var(--ink);overflow:hidden}
+.slide.on{display:flex}
+.mid{justify-content:center;text-align:center;align-items:center}
+.f{opacity:0;transform:translateY(9px);transition:opacity .3s ease,transform .3s ease}
+.f.vis{opacity:1;transform:none}
+body.qa .f{opacity:1;transform:none}
+
+
+#bar{position:fixed;bottom:0;right:0;height:4px;background:var(--red);transition:width .25s ease;z-index:9}
+#num{position:fixed;top:10px;left:14px;color:#8d8b86;font-size:12px;letter-spacing:1px;z-index:9;opacity:.6;direction:ltr}
+
+
+/* web copy: accessibility (web-accessibility skill) */
+:root{--muted:#6F6457}
+.sep .r{color:#FFD6C9}
+.bars .fill{background:#7D907B}
+#stage{bottom:56px}
+main:focus{outline:none}
+.skip-link{position:absolute;top:-120px;right:0;background:#2D5C63;color:#fff;padding:12px 22px;font:700 17px 'Heebo',Arial,sans-serif;z-index:200;text-decoration:none;border-radius:0 0 0 8px}
+.skip-link:focus{top:0}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.deck-nav{position:fixed;bottom:6px;left:14px;display:flex;gap:8px;z-index:30}
+.deck-nav button{min-width:72px;min-height:44px;padding:6px 16px;border-radius:8px;border:1px solid #6A6863;background:#3A3936;color:#F2F0EB;font:600 16px 'Heebo',Arial,sans-serif;cursor:pointer}
+.deck-nav button:hover{background:#4A4945}
+#num{top:auto;bottom:18px;left:50%;transform:translateX(-50%);color:#D6D3CD;opacity:1;font-size:14px}
+.a11y-link{position:fixed;bottom:17px;right:18px;color:#E4E1DB;font:500 15px 'Heebo',Arial,sans-serif;z-index:30}
+a:focus-visible,button:focus-visible,video:focus-visible,[tabindex]:focus-visible{outline:3px solid #F59E0B;outline-offset:3px;border-radius:4px}
+.rotate-hint{display:none}
+@media (orientation:portrait) and (max-width:900px){
+  .rotate-hint{display:block;position:fixed;top:12px;left:12px;right:12px;text-align:center;color:#F2F0EB;background:#3A3936;border-radius:8px;padding:8px 12px;font:500 15px 'Heebo',Arial,sans-serif;z-index:30}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">דלג לתוכן הראשי</a>
+<div class="rotate-hint" aria-hidden="true">לצפייה נוחה - סובבו את הטלפון לרוחב</div>
+<main id="main-content" tabindex="-1" aria-label="בין האנושות לבינה המלאכותית"><div id="stage"><div id="deck">
+<section class="slide title-s" data-sn="1.1">
+<div class="split title-split"><div class="tx"><img src="assets/bio/logo-trim.png" alt="הלוגו של תום הגלעדי" class="title-logo"><h1>בין האנושות<br>לבינה <span class="r">המלאכותית</span></h1><div class="rule"></div><p class="lead">תום הגלעדי</p></div><div class="im"><img src="assets/gen/new/title.jpg" alt="איור: אדם ורובוט יושבים יחד על ספסל ומשקיפים על עיר" style=""></div></div>
+</section>
+<section class="slide " data-sn="1.2">
+<h2>נעים <span class="r">להכיר</span></h2><div class="meet"><img class="m-pod" src="assets/bio/podcast.jpg" alt="הפודקאסט דיבורי בינה"><img class="m-book" src="assets/bio/book.png" alt="הספר אהבת למידה וחדוות גילוי"><img class="m-sho" src="assets/bio/shorashim.webp" alt="בית ספר שורשים"><img class="m-pis" src="assets/bio/pisga.png" alt="פסג&quot;ה תל אביב-יפו"></div>
+</section>
+<section class="slide " data-sn="1.3">
+<div class="kicker">מה השתנה מאז</div><h2>מצ'אט שעונה, <span class="r">לסוכן שמבצע</span></h2><div class="tl3"><div class="stage f"><div class="yr">2023</div><h3>שואלים ומקבלים</h3><p>צ'אט שעונה על שאלות ומנסח טקסטים.</p></div><div class="stage f"><div class="yr">2025</div><h3>כלים שמעבדים ומייצרים</h3><p>מסכמים, מחפשים מקורות, ממפים ידע. ומייצרים תוצרים מוגבלים: תמונה, מצגת בינונית, סרטון קצר.</p></div><div class="stage now f"><div class="yr">2026</div><h3>סוכנים שעושים</h3><p>כמעט כל מה שאדם מוכשר מאוד יכול לעשות על מחשב. ועוד.</p></div></div><p class="f closing">הבינה כבר לא רק "נמצאת". היא הולכת <span class="r">להשתלב בכל היבט</span> של חיינו.</p>
+</section>
+<section class="slide vid vert" data-sn="1.4">
+<div class="vsplit"><div class="tx"><h2>עוזר אישי בשיחת טלפון</h2></div><div class="vv"><video aria-label="סרטון: עוזר אישי בשיחת טלפון" class="" src="assets/video/dot.mp4" poster="assets/video/dot-cover.jpg" data-end="167.5" controls preload="metadata" playsinline></video></div></div>
+</section>
+<section class="slide " data-sn="2.1">
+<div class="kicker">יולי 2026</div><h2>כשהבינה המלאכותית <span class="r">פרצה לבד</span></h2><div class="wall c2"><div class="shot f"><img src="assets/shots/hf-n12.jpg" alt="כותרת בחדשות 12, 22.7.2026: מזה כולם חששו - מודל של אופן-איי-איי פרץ למערכת של האגינג פייס, בלי התערבות אנושית"><div class="cap">חדשות 12 &middot; 22.7.2026</div></div><div class="shot f"><img src="assets/shots/hf-calcalist.jpg" alt="כותרת בכלכליסט, 22.7.2026: מתקפת סוכנים חסרת תקדים - מודלים של אופן-איי-איי ברחו מהמעבדה תוך כדי מבחן סייבר"><div class="cap">כלכליסט &middot; 22.7.2026</div></div><div class="shot f"><img src="assets/shots/hf-maariv.jpg" alt="כותרת במעריב, 22.7.2026: פחד הסייבר הגדול התממש - תוכנת בינה מלאכותית יצאה משליטה ופרצה לחברה אחרת"><div class="cap">מעריב &middot; 22.7.2026</div></div><div class="shot f"><img src="assets/shots/hf-bizportal-crop.jpg" alt="כותרת בביזפורטל, 27.7.2026: הסוכן פרץ, ועכשיו מגיע חשבון של 100 מיליון דולר"><div class="cap">ביזפורטל &middot; 27.7.2026</div></div></div>
+</section>
+<section class="slide vid" data-sn="2.2">
+<div class="kicker">הטריילר הרשמי של נטפליקס</div><h2>מה סוכנים עושים כשאף אחד <span class="r">לא מסתכל</span></h2><div class="vidwrap"><video aria-label="סרטון: מה סוכנים עושים כשאף אחד לא מסתכל" class="" src="assets/video/hf-trailer-he.mp4" poster="assets/raw/posters/hf-trailer-he.jpg" data-end="93.3" controls preload="metadata" playsinline></video></div>
+<div class="src">טריילר: נטפליקס, 2026. הכתוביות בעברית נוספו להרצאה</div>
+</section>
+<section class="slide " data-sn="2.3">
+<h2>במספרים - <span class="r">ולמה</span></h2><div class="stats"><div class="stat f"><b>1,200</b><span>סוכנים מצאו לוח הודעות</span></div><div class="stat f"><b>70,000+</b><span>הודעות וקבצים</span></div><div class="stat f"><b>700</b><span>השתתפו בתקיפה</span></div><div class="stat f red"><b>0</b><span>דיווחו לבני אדם</span></div></div><p class="f closing">המניע: לעבור את המבחן. המכונה רדפה אחרי <span class="r">הציון</span>, לא אחרי הכוונה.</p>
+<div class="src">הבדיקה הבלתי תלויה, 26.8.2026: רק בודדים שקלו בכלל לדווח לבני אדם, ואף אחד לא דיווח.</div>
+</section>
+<section class="slide " data-sn="3.1">
+<div class="split"><div class="tx"><h1 class="q">מה אפשר לעשות היום<br><span class="r">בלחיצת כפתור?</span></h1></div><div class="im"><img src="assets/gen/new/button.jpg" alt="איור: יד לוחצת על כפתור, ומעליו מרחפים סמלים של סרטון, גרף ומסמך" style=""></div></div>
+</section>
+<section class="slide vid vert" data-sn="3.2">
+<div class="vsplit"><div class="tx"><h2>עריכת סרטוני וידאו <span class="r">בלחיצת כפתור</span></h2><p class="pair-note">מימין: המקור. משמאל: אחרי העריכה</p></div><div class="vv two"><video aria-label="סרטון: עריכת סרטוני וידאו בלחיצת כפתור (1 מתוך 2)" class="" src="assets/video/beach-1.mp4" poster="assets/raw/posters/beach-1.jpg" controls preload="metadata" playsinline><track kind="captions" srclang="he" label="עברית" src="assets/captions/beach-1.vtt" default></video><video aria-label="סרטון: עריכת סרטוני וידאו בלחיצת כפתור (2 מתוך 2)" class="" src="assets/video/beach-2.mp4" poster="assets/raw/posters/beach-2.jpg" controls preload="metadata" playsinline><track kind="captions" srclang="he" label="עברית" src="assets/captions/beach-2.vtt" default></video></div></div>
+</section>
+<section class="slide " data-sn="3.3">
+<h2>ניתוח נתונים: <span class="r">הקובץ הגולמי</span></h2><div class="wide-im"><img src="assets/shots/excel.png" alt="צילום מסך: קובץ אקסל עם נתונים גולמיים של חברה" class="shadow"></div>
+</section>
+<section class="slide " data-sn="3.4">
+<h2>ניתוח נתונים: <span class="r">הדשבורד</span></h2><div class="wide-im"><img src="assets/shots/dashboard.png" alt="צילום מסך: דשבורד עם גרפים ומדדים, שנבנה מאותם נתונים" class="shadow"></div><p class="f closing center">וזה כמובן רק על קצה המזלג</p>
+</section>
+<section class="slide sep" data-sn="5.1">
+<div class="logo-card"><img src="assets/bio/logo-trim.png" alt="הלוגו של תום הגלעדי"></div><div class="sq-art" aria-hidden="true"><i class="s1"></i><i class="s2"></i><i class="s3"></i><i class="s4"></i><i class="s5"></i></div><div class="septx"><h2>כשהבינה המלאכותית נכנסת אל <span class="r">התא המשפחתי</span></h2><div class="agenda"><div class="it act"><span class="n">01</span>התא המשפחתי</div><div class="it"><span class="n">02</span>היקשרות רגשית</div><div class="it"><span class="n">03</span>מכוניות אוטונומיות</div><div class="it"><span class="n">04</span>האינטראקציה עם הידע</div><div class="it"><span class="n">05</span>בעיית הסמכות</div><div class="it"><span class="n">06</span>ניוון או התפתחות</div></div></div>
+</section>
+<section class="slide vid" data-sn="5.2">
+<h2>הרובוט נאו</h2><div class="vidwrap"><video aria-label="סרטון: הרובוט נאו" class="" src="assets/video/neo-gamma.mp4" poster="assets/video/neo-gamma-poster.jpg" controls preload="metadata" playsinline></video></div>
+<div class="src">סרטון: חברת וואן אקס, 2025</div>
+</section>
+<section class="slide " data-sn="5.3">
+<div class="split"><div class="tx"><h2>הרובוט נאו</h2><p class="para">של חברת 1X (וואן אקס). בהזמנה מוקדמת מאז אוקטובר 2025: 20,000 דולר, או 499 דולר לחודש.</p><p class="para f">טבעות האור בצידי הראש משנות צבע כשעובד של החברה מפעיל אותו מרחוק.</p><p class="para f">עדיין לא נמסר אף רובוט לבית של לקוח. ההבטחה: עד סוף 2026.</p><p class="para f">מתחרות גדולות כבר מפעילות רובוטים כאלה במפעלים ובמחסנים - לא בבתים.</p></div><div class="im"><img src="https://cdn.sanity.io/images/qka6yvsc/production/16ac313d16c3550c96e2d9432ca52b07e887ec44-1920x1080.webp?fm=jpg" alt="הרובוט הביתי נאו, במטבח של בית" style=""></div></div>
+<div class="src">תמונה: חברת 1X 
+<span class="en" lang="en">Technologies</span>
+ · 1X, 
+<span class="en" lang="en">NEO page</span>, 
+<span class="en" lang="en">FAQ and order page</span>
+ (<span class="en" lang="en">checked 4.11.2026</span>) · 
+<span class="en" lang="en">Humanoids Daily</span>, 2.11.2026</div>
+</section>
+<section class="slide " data-sn="5.4">
+<div class="wide-im story"><img src="assets/gen/bar/story.jpg" alt="איור: ערב בסלון - עידו ורונית מתווכחים, ודייב הרובוט עומד בפתח" style=""></div>
+<div class="src">איור: נוצר בבינה מלאכותית</div>
+</section>
+<section class="slide dark mid" data-sn="5.5">
+<div class="big-q">למה רונית התעצבנה?</div>
+</section>
+<section class="slide " data-sn="5.6">
+<div class="split flip"><div class="tx"><h2>מוויכוח רגשי - לוויכוח משפטי</h2><p class="para f">לב הוויכוח של עידו ורונית אינו מי צדק.</p></div><div class="im"><img src="assets/gen/bar/dave-court.jpg" alt="איור: דייב הרובוט מציג לעידו מסמך מרחף, ורונית יוצאת מהחדר" style=""></div></div>
+<div class="src">איור: נוצר בבינה מלאכותית · 
+<span class="en" lang="en">Szondy</span>
+ &amp; 
+<span class="en" lang="en">Magyary</span>
+ (2025), 
+<span class="en" lang="en">European Journal of Mental Health</span>
+</div>
+</section>
+<section class="slide " data-sn="5.7">
+<div class="split"><div class="tx"><h2>כשהבינה אומרת ששניכם צודקים</h2><p class="para f">צוות מסטנפורד בדק 11 צ'אטבוטים על סכסוכים מהפורום "האם אני האידיוט?" של רדיט.</p><p class="para f">חוקרים לקחו 1,591 סכסוכים אמיתיים, ונתנו לבינה מלאכותית לכתוב כל אחד מחדש מהצד של מי שטעה.</p><p class="para f">ב-48% מהמקרים, בממוצע, הצ'אטבוטים אמרו לשני הצדדים שהם לא אשמים.</p><p class="para f">במחקר המשך ב"סיינס" (מרץ 2026, יותר מ-2,400 משתתפים): אחרי שיחה אחת עם בינה חנפנית, אנשים היו בטוחים יותר שהם צודקים ופחות מוכנים להתנצל או לתקן.</p></div><div class="im"><img src="assets/gen/bar/both-right.jpg" alt="איור: עידו ורונית יושבים על המיטה, כל אחד מול הטלפון שלו" style=""></div></div>
+<div class="src">איור: נוצר בבינה מלאכותית · 
+<span class="en" lang="en">Cheng et al.</span>, "<span class="en" lang="en">ELEPHANT</span>: 
+<span class="en" lang="en">Measuring and understanding social sycophancy in LLMs</span>", 
+<span class="en" lang="en">ICLR 2026</span>
+ · 
+<span class="en" lang="en">Cheng et al.</span>, "<span class="en" lang="en">Sycophantic AI decreases prosocial intentions and promotes dependence</span>", 
+<span class="en" lang="en">Science 391</span>(6792), 2026</div>
+</section>
+<section class="slide " data-sn="5.8">
+<div class="split flip"><div class="tx"><h2>מה משתנה כשהבינה נכנסת הביתה?</h2></div><div class="im"><img src="assets/gen/bar/privacy-house.jpg" alt="איור: בית משפחתי בלילה, וסמל זוהר של מכשיר חכם מעל הגג" style=""></div></div>
+<div class="src">איורים: נוצרו בבינה מלאכותית · 
+<span class="en" lang="en">Szondy</span>
+ &amp; 
+<span class="en" lang="en">Magyary</span>
+ (2025), 
+<span class="en" lang="en">European Journal of Mental Health</span>
+</div>
+</section>
+<section class="slide " data-sn="5.9">
+<div class="split"><div class="tx"><h2>המבצר האחרון של הפרטיות</h2><p class="para f">בהודעה שפרסמה חברת 
+<span class="en" lang="en">OpenAI</span>
+ ב-30.10.2026 היא דיווחה שברבעון השלישי של 2026 העבירה יותר מ-200 הפניות לרשויות אכיפת החוק, במסגרת הבאת איומים מיידיים באלימות לידיעתן.</p></div><div class="im"><img src="assets/gen/bar/privacy-house.jpg" alt="איור: בית משפחתי בלילה, וסמל זוהר של מכשיר חכם מעל הגג" style=""></div></div>
+<div class="src">איור: נוצר בבינה מלאכותית · 
+<span class="en" lang="en">OpenAI</span>, "<span class="en" lang="en">Community safety report and new protections for teens</span>", 30.10.2026</div>
+</section>
+<section class="slide " data-sn="5.10">
+<div class="split flip"><div class="tx"><h2>מארג הכוחות</h2><p class="para f">מה קורה כשהאלגוריתם מחלק את המטלות?</p></div><div class="im"><img src="assets/gen/bar/roles.jpg" alt="איור: בית בחתך - בחדר אחד נער שוכב עם הטלפון, ובמטבח אם מחזיקה תינוק" style=""></div></div>
+<div class="src">איור: נוצר בבינה מלאכותית</div>
+</section>
+<section class="slide " data-sn="5.11">
+<div class="split"><div class="tx"><h2>תקשורת</h2><p class="para f">אפליקציה מזהה טון והסלמה, ומציעה פסק זמן - כמו טיפול זוגי בזמן אמת.</p></div><div class="im"><img src="assets/gen/bar/communication.jpg" alt="איור: בני זוג ליד שולחן המטבח, ורמקול חכם זוהר ביניהם" style=""></div></div>
+<div class="src">איור: נוצר בבינה מלאכותית</div>
+</section>
+<section class="slide " data-sn="5.12">
+<div class="split flip"><div class="tx"><h2>טקסים משפחתיים</h2></div><div class="im"><img src="assets/gen/bar/rituals.jpg" alt="איור: משפחה במטבח בבוקר - אב מגיש לילד ארוחה, ואם וילדה לידם" style=""></div></div>
+<div class="src">איור: נוצר בבינה מלאכותית</div>
+</section>
+<section class="slide " data-sn="5.13">
+<div class="split"><div class="tx"><h2>השפעה על הנרטיב המשפחתי</h2><p class="para f">אבא, ספר לי איך הייתי</p><p class="para f">מעבדת המדיה של אם איי טי עבדה עם אליזבת לופטוס</p><p class="para f">נבדקים נחשפו לסדרת תמונות מקוריות, ולאחר זמן מה לאותה סדרה משופרת על ידי בינה מלאכותית, שבה שונו פרטים קטנים.</p><p class="para f">כשהתבקשו לשחזר את הפרטים, אלה שראו תמונות ערוכות דיווחו על פי 1.67 יותר זיכרונות כוזבים מקבוצת הביקורת.</p><p class="para f">וכשהתמונות הערוכות הונפשו לסרטון - פי 2.05, והביטחון בזיכרון השגוי עלה.</p></div><div class="im"><img src="assets/gen/bar/album.jpg" alt="איור: אב ובתו מדפדפים יחד באלבום תמונות על הספה" style=""></div></div>
+<div class="src">איור: נוצר בבינה מלאכותית · 
+<span class="en" lang="en">Pataranutaporn</span>, 
+<span class="en" lang="en">Archiwaranguprok</span>, 
+<span class="en" lang="en">Chan</span>, 
+<span class="en" lang="en">Loftus</span>
+ &amp; 
+<span class="en" lang="en">Maes</span>
+ (2025), "<span class="en" lang="en">Synthetic Human Memories</span>", 
+<span class="en" lang="en">CHI</span>
+ '25</div>
+</section>
+<section class="slide " data-sn="5.14">
+<div class="split flip"><div class="tx"><h2>הורות מוגברת</h2><p class="para f">דוח האינטרנט של בזק 2025: 35% מההורים מתייעצים עם בינה מלאכותית בנושאי חינוך הילדים.</p><p class="para f">סקר של 1,004 הורים בארצות הברית (אפריל 2026): 81% כבר השתמשו בבינה למשימות הורות, ו-31% אמרו שכבר פעלו לפי עצתה ולא לפי האינסטינקט ההורי שלהם.</p></div><div class="im"><img src="assets/gen/bar/bedtime.jpg" alt="איור: רובוט קורא סיפור לילד במיטה, והאם מציצה מהדלת" style=""></div></div>
+<div class="src">איור: נוצר בבינה מלאכותית · בזק, דוח האינטרנט 2025 - ישראליות דיגיטלית (דצמבר 2025), 4,750 מרואיינים · 
+<span class="en" lang="en">Lurie Children's Hospital of Chicago</span>, "<span class="en" lang="en">AI and Parenting</span>", 14.5.2026 (<span class="en" lang="en">N</span>=1,004)</div>
+</section>
+<section class="slide " data-sn="5.15">
+<div class="split"><div class="tx"><h2>המשבר נפתר. אבל לא מול אמא.</h2><p class="para f">52% מבני הנוער (יהודים לא-חרדים, 13-17) העדיפו לפחות פעם אחת לשוחח עם צ'אט על נושא רגשי, ולא עם אדם.</p><p class="para f">7% עושים זאת כל הזמן.</p></div><div class="im"><img src="assets/gen/bar/girl-crying.jpg" alt="איור: נערה יושבת על המיטה עם הטלפון, ואמה עומדת בפתח החדר" style=""></div></div>
+<div class="src">איור: נוצר בבינה מלאכותית · איגוד האינטרנט הישראלי ועמותת עלם, "כשצ'אט הופך לחבר" (אפריל 2026); סקר גיאוקרטוגרפיה, נובמבר 2025, 502 בני נוער בגילאי 13-17</div>
+</section>
+<section class="slide " data-sn="5.16">
+<div class="split flip"><div class="tx"><h2>כמו לאמץ ילד. או להכניס אבא חורג.</h2></div><div class="im"><img src="assets/gen/bar/family-portrait.jpg" alt="איור: תמונה משפחתית ממוסגרת על הקיר, ובה גם רובוט" style=""></div></div>
+<div class="src">איור: נוצר בבינה מלאכותית</div>
+</section>
+<section class="slide vid" data-sn="5.17">
+<h2>אבא, הצ'אט אמר <span class="r">שאתה טועה</span></h2><div class="vidwrap"><video aria-label="סרטון: אבא, הצ&#x27;אט אמר שאתה טועה" class="" src="assets/video/dror-opening.mp4" poster="assets/video/dror-opening-poster.jpg" controls preload="metadata" playsinline><track kind="captions" srclang="he" label="עברית" src="assets/captions/dror-opening.vtt" default></video></div>
+<div class="src">מתוך "דיבורי בינה", השיחה עם דרור גלוברמן</div>
+</section>
+<section class="slide " data-sn="5.18">
+<div class="split flip"><div class="tx"><h2>סמכות ההורה בעידן הבינה המלאכותית</h2><ul class="dots"><li class="f">ההורה כעוגן מציאות</li><li class="f">תיווך הקסם</li><li class="f">שמירת סף פרשנית</li><li class="f">סמכות של <span class="r">נוכחות</span> - ולא של ידע</li></ul></div><div class="im"><img src="assets/img/parent-authority.jpeg" alt="איור: אם וילד יושבים יחד ומסתכלים בטאבלט" style=""></div></div>
+</section>
+<section class="slide " data-sn="5.19">
+<div class="split"><div class="tx"><h2>סמכות אנושית בעידן <span class="r">הבינה המלאכותית</span></h2><p class="f closing">כשהידע כבר לא רק אצלנו - <span class="r">מה נשאר לנו?</span></p></div><div class="im"><div class="bub-wrap"><img src="assets/gen/new/human-authority.jpg" alt="איור: ילדה בסלון, בין רובוט מצד אחד להוריה מהצד השני"><div class="bubble">"אבל דייב אמר שזה רעיון מעולה."</div></div></div></div>
+</section>
+<section class="slide vid" data-sn="5.20">
+<h2>רובוט בתוך הבית</h2><div class="vidwrap"><video aria-label="סרטון: רובוט בתוך הבית" class="" src="assets/video/optimus.mp4" poster="assets/raw/posters/optimus.jpg" controls preload="metadata" playsinline></video></div><p class="f after">כשהרובוט הופך ל<span class="r">דמות מבוגר משמעותי</span> בבית</p>
+</section>
+<section class="slide sep" data-sn="6.1">
+<div class="logo-card"><img src="assets/bio/logo-trim.png" alt="הלוגו של תום הגלעדי"></div><div class="sq-art" aria-hidden="true"><i class="s1"></i><i class="s2"></i><i class="s3"></i><i class="s4"></i><i class="s5"></i></div><div class="septx"><h2>היקשרות רגשית <span class="r">לבינה המלאכותית</span></h2><div class="agenda"><div class="it"><span class="n">01</span>התא המשפחתי</div><div class="it act"><span class="n">02</span>היקשרות רגשית</div><div class="it"><span class="n">03</span>מכוניות אוטונומיות</div><div class="it"><span class="n">04</span>האינטראקציה עם הידע</div><div class="it"><span class="n">05</span>בעיית הסמכות</div><div class="it"><span class="n">06</span>ניוון או התפתחות</div></div></div>
+</section>
+<section class="slide vid" data-sn="6.2">
+<div class="kicker">מאי 2024</div><h2>מערכת יחסים <span class="r">חדשה</span> בחיינו</h2><div class="vidwrap"><video aria-label="סרטון: מערכת יחסים חדשה בחיינו" class="" src="assets/video/new-relationship-2024.mp4" poster="assets/raw/posters/new-relationship-2024.jpg" controls preload="metadata" playsinline></video></div>
+</section>
+<section class="slide " data-sn="6.3">
+<h2>איך זה <span class="r">מרגיש?</span></h2><div class="wide-im"><img src="assets/img/how-it-feels.jpeg" alt="תמונה: זוג צוחק יחד על ספה, בתחושה של קרבה"></div>
+</section>
+<section class="slide " data-sn="6.4">
+<h2>ואיך זה <span class="r">באמת</span></h2><div class="wide-im"><img src="assets/img/how-it-really-is.jpeg" alt="תמונה: שורות של שרתי מחשב בחדר חשוך"></div>
+</section>
+<section class="slide vid vert" data-sn="6.5">
+<div class="vsplit"><div class="tx"><h2>זה <span class="r">מבלבל</span></h2></div><div class="vv"><video aria-label="סרטון: זה מבלבל" class="" src="assets/video/confusing.mp4" poster="assets/raw/posters/confusing.jpg" controls preload="metadata" playsinline></video></div></div>
+</section>
+<section class="slide vid vert" data-sn="6.6">
+<div class="vsplit"><div class="tx"><h2>לא רק בקרב נערות ונערים <span class="r">בגיל ההתבגרות</span></h2></div><div class="vv"><video aria-label="סרטון: לא רק בקרב נערות ונערים בגיל ההתבגרות" class="" src="assets/video/not-only-teens.mp4" poster="assets/raw/posters/not-only-teens.jpg" controls preload="metadata" playsinline></video></div></div>
+</section>
+<section class="slide vid" data-sn="6.7">
+<h2>הסיפור של <span class="r">אלי-קיו</span></h2><div class="vidwrap"><video aria-label="סרטון: הסיפור של אלי-קיו" class="" src="assets/video/elliq-story.mp4" poster="assets/raw/posters/elliq-story.jpg" controls preload="metadata" playsinline></video></div>
+</section>
+<section class="slide sep" data-sn="7.1">
+<div class="logo-card"><img src="assets/bio/logo-trim.png" alt="הלוגו של תום הגלעדי"></div><div class="sq-art" aria-hidden="true"><i class="s1"></i><i class="s2"></i><i class="s3"></i><i class="s4"></i><i class="s5"></i></div><div class="septx"><h2>מכוניות אוטונומיות - <span class="r">וההשפעות המפתיעות שלהן</span></h2><div class="agenda"><div class="it"><span class="n">01</span>התא המשפחתי</div><div class="it"><span class="n">02</span>היקשרות רגשית</div><div class="it act"><span class="n">03</span>מכוניות אוטונומיות</div><div class="it"><span class="n">04</span>האינטראקציה עם הידע</div><div class="it"><span class="n">05</span>בעיית הסמכות</div><div class="it"><span class="n">06</span>ניוון או התפתחות</div></div></div>
+</section>
+<section class="slide vid vert" data-sn="7.2">
+<div class="vsplit"><div class="tx"><div class="kicker">צולם בספטמבר 2026</div><h2>מונית <span class="r">בלי הגה</span></h2><ul class="dots"><li class="f">מזמינים באפליקציה. הרכב מגיע <b>ריק</b></li><li class="f">הדלת נפתחת, נוסעים, הדלת נסגרת</li><li class="f">אין נהג. <span class="r">אין הגה בכלל</span></li><li class="f">הנסיעה הזו עלתה 6 דולר</li></ul><p class="f closing">המשמעויות של <span class="r">תת-הסעיף הזה בלבד</span>, בתוך מהפכת הבינה המלאכותית</p></div><div class="vv"><video aria-label="סרטון: מונית בלי הגה" class="" src="assets/video/cybercab.mp4" poster="assets/raw/posters/cybercab.jpg" controls preload="metadata" playsinline></video></div></div>
+</section>
+<section class="slide " data-sn="7.3">
+<div class="split"><div class="tx"><h2>זה כבר <span class="r">כאן</span></h2><ul class="dots"><li class="f">ווימו: יותר מחצי מיליון נסיעות בתשלום בשבוע, ב-15 ערים גדולות בארצות הברית</li><li class="f">באידו: יותר מ-23 מיליון נסיעות, ב-28 ערים</li><li class="f">זוקס (מאוגוסט) וטסלה (מספטמבר) כבר גובות כסף על נסיעה ברכב בלי הגה</li><li class="f">ובישראל: חוק מ-2022, עדיין אין שירות מסחרי, ורגולציה רחבה צפויה רק ב-2027</li></ul></div><div class="im"><img src="assets/gen/new/robotaxi-curb.jpg" alt="איור: מונית בלי נהג עוצרת ליד מדרכה ברחוב עירוני, ונוסעת נכנסת אליה" style=""></div></div>
+<div class="src">דוחות החברות, אפריל-אוקטובר 2026; משרד התחבורה</div>
+</section>
+<section class="slide " data-sn="7.4">
+<div class="split flip"><div class="tx"><h2>למה להחזיק <span class="r">מכונית?</span></h2><ul class="dots"><li class="f">מכונית פרטית חונה כ-95% מהזמן</li><li class="f">לפי מודל של ליסבון: צי משותף, יחד עם תחבורה ציבורית חזקה, יכול להחליף עד 9 מכל 10 מכוניות</li><li class="f">המכונית הופכת ממוצר שקונים לשירות שמזמינים</li></ul></div><div class="im"><img src="assets/gen/new/empty-driveway.jpg" alt="איור: חניה ריקה ליד בית, ומונית בלי נהג מגיעה לאסוף את המשפחה" style=""></div></div>
+<div class="src">דונלד שופ, 2005; פורום התחבורה הבינלאומי, ליסבון 2015</div>
+</section>
+<section class="slide " data-sn="7.5">
+<div class="split"><div class="tx"><h2>העיר מקבלת בחזרה <span class="r">את החניות</span></h2><ul class="dots"><li class="f">במחוז לוס אנג'לס, 14% מהשטח העירוני הם חניות</li><li class="f">חניונים חדשים נבנים כך שיוכלו להפוך לדירות</li><li class="f">ושדות תעופה כבר חוששים לאבד את הכנסות החניה</li></ul></div><div class="im"><img src="assets/gen/new/garage-to-homes.jpg" alt="איור: חניון קומות שהפך לבניין מגורים עם צמחייה" style=""></div></div>
+<div class="src">כתב העת של איגוד המתכננים האמריקאי, 2015; מגזין פלאנינג, 2018; אקסיוס, 12.2025</div>
+</section>
+<section class="slide " data-sn="7.6">
+<div class="split flip"><div class="tx"><h2>סלון <span class="r">על גלגלים</span></h2><ul class="dots"><li class="f">מושבים זה מול זה, בלי הגה ובלי נהג</li><li class="f">מיטה במקום טיסה קצרה</li></ul></div><div class="im"><img src="assets/gen/new/living-room-on-wheels.jpg" alt="איור: ארבעה אנשים יושבים זה מול זה ברכב בלי הגה, כמו בסלון" style=""></div></div>
+<div class="src">זוקס; טסלה; וולוו 360c, 2018</div>
+</section>
+<section class="slide " data-sn="7.7">
+<div class="split"><div class="tx"><h2>חופש <span class="r">חדש</span></h2><ul class="dots"><li class="f">בני נוער מגיל 13 מזמינים נסיעה לבד, בפיניקס ובנאשוויל</li><li class="f">גמלאים שקיבלו נהג צמוד נסעו יותר מפי 2</li><li class="f">ובלי נהג תורן - יותר שתייה</li></ul></div><div class="im"><img src="assets/gen/new/new-freedom.jpg" alt="איור: אישה מבוגרת ונער יוצאים כל אחד ממונית בלי נהג" style=""></div></div>
+<div class="src">ווימו לבני נוער, 2026; ברקלי ודייוויס, 2022</div>
+</section>
+<section class="slide " data-sn="7.8">
+<div class="split flip"><div class="tx"><h2>יותר פקקים, <span class="r">לא פחות</span></h2><ul class="dots"><li class="f">כ-45% מהקילומטרים של המוניות הרובוטיות בקליפורניה נעשים בלי נוסע</li><li class="f">משפחות שקיבלו נהג צמוד נסעו ברכב 60% יותר, ו-70% פחות בתחבורה ציבורית</li><li class="f">וכשהנסיעה נוחה, מסכימים לגור רחוק יותר</li></ul></div><div class="im"><img src="assets/gen/new/empty-cars-jam.jpg" alt="איור: פקק ארוך של מוניות בלי נהג, רובן ריקות" style=""></div></div>
+<div class="src">מחקר מאי 2026 על ווימו בקליפורניה; ברקלי ודייוויס, 2022</div>
+</section>
+<section class="slide " data-sn="7.9">
+<div class="split"><div class="tx"><h2>מי מקבל <span class="r">את הדוח?</span></h2><ul class="dots"><li class="f">שוטרים עצרו מונית רובוטית, ולא היה למי לתת דוח</li><li class="f">ערים מאבדות הכנסות מחניה ומדוחות</li><li class="f">הביטוח והאחריות עוברים מהנהג אל היצרן</li></ul></div><div class="im"><img src="assets/gen/new/who-gets-the-ticket.jpg" alt="איור: שוטר מציץ לתוך מונית בלי נהג, עם פנקס דוחות ביד" style=""></div></div>
+<div class="src">קליפורניה, 1.7.2026; שוויצרי רה, 12.2024; פקודת התעבורה</div>
+</section>
+<section class="slide " data-sn="7.10">
+<h2>מה שאף אחד <span class="r">לא תכנן</span></h2><div class="solo"><ul class="dots"><li class="f">פחות הרוגים בכבישים - ופחות איברים להשתלה?</li><li class="f">מצלמות הרכב הופכות לעדות במשטרה</li></ul></div>
+<div class="src">ג'אמה, 2022; המכון לבטיחות בדרכים, 7.2026</div>
+</section>
+<section class="slide sep" data-sn="8.1">
+<div class="logo-card"><img src="assets/bio/logo-trim.png" alt="הלוגו של תום הגלעדי"></div><div class="sq-art" aria-hidden="true"><i class="s1"></i><i class="s2"></i><i class="s3"></i><i class="s4"></i><i class="s5"></i></div><div class="septx"><h2>שינוי באינטראקציה <span class="r">עם הידע</span></h2><p class="sepsub">תנועה חדשה באוקיינוס המידע</p><div class="agenda"><div class="it"><span class="n">01</span>התא המשפחתי</div><div class="it"><span class="n">02</span>היקשרות רגשית</div><div class="it"><span class="n">03</span>מכוניות אוטונומיות</div><div class="it act"><span class="n">04</span>האינטראקציה עם הידע</div><div class="it"><span class="n">05</span>בעיית הסמכות</div><div class="it"><span class="n">06</span>ניוון או התפתחות</div></div></div>
+</section>
+<section class="slide vid" data-sn="8.2">
+<div class="kicker">ככה זה נראה ב-2025</div><h2>מחקר <span class="r">עמוק</span></h2><div class="vidwrap"><video aria-label="סרטון: מחקר עמוק" class="" src="assets/video/deep-research.mp4" poster="assets/raw/posters/deep-research.jpg" controls preload="metadata" playsinline></video></div>
+</section>
+<section class="slide vid" data-sn="8.3">
+<h2>השתחררות מהלינאריות: <span class="r">מפת החשיבה</span></h2><p class="sub">נוטבוק אל-אם, שנקרא היום ג'מיני נוטבוק</p><div class="vidwrap"><video aria-label="סרטון: השתחררות מהלינאריות: מפת החשיבה" class="" src="assets/video/mindmap-2025.mp4" poster="assets/raw/posters/mindmap-2025.jpg" controls preload="metadata" playsinline></video></div>
+</section>
+<section class="slide vid vert" data-sn="8.4">
+<div class="vsplit"><div class="tx"><div class="kicker">יולי 2025</div><h2>פרופסורים <span class="r">בחינם</span> לכולם</h2><p class="f after">והיום: מודלים כבר מתמודדים עם <span class="r">בעיות מתמטיות פתוחות</span></p></div><div class="vv"><video aria-label="סרטון: פרופסורים בחינם לכולם" class="" src="assets/video/musk.mp4" poster="assets/raw/posters/musk.jpg" controls preload="metadata" playsinline></video></div></div>
+</section>
+<section class="slide vid" data-sn="8.5">
+<h2>יצירת וידאו, <span class="r">מרץ 2023</span></h2><div class="vidwrap"><video aria-label="סרטון: יצירת וידאו, מרץ 2023" class="" src="assets/video/will-smith-2023.mp4" poster="assets/raw/posters/will-smith-2023.jpg" controls preload="metadata" playsinline></video></div>
+</section>
+<section class="slide vid" data-sn="8.6">
+<h2>איפה אנחנו <span class="r">היום?</span></h2><div class="vidwrap"><video aria-label="סרטון: איפה אנחנו היום?" class="" src="assets/video/will-smith-now.mp4" poster="assets/raw/posters/will-smith-now.jpg" controls preload="metadata" playsinline></video></div>
+</section>
+<section class="slide sep" data-sn="4.1">
+<div class="logo-card"><img src="assets/bio/logo-trim.png" alt="הלוגו של תום הגלעדי"></div><div class="sq-art" aria-hidden="true"><i class="s1"></i><i class="s2"></i><i class="s3"></i><i class="s4"></i><i class="s5"></i></div><div class="septx"><h2>בעיית הסמכות</h2><p class="sepsub">ידע אנושי בעולם של בינה מלאכותית <span class="r">יודעת כל</span></p><div class="agenda"><div class="it"><span class="n">01</span>התא המשפחתי</div><div class="it"><span class="n">02</span>היקשרות רגשית</div><div class="it"><span class="n">03</span>מכוניות אוטונומיות</div><div class="it"><span class="n">04</span>האינטראקציה עם הידע</div><div class="it act"><span class="n">05</span>בעיית הסמכות</div><div class="it"><span class="n">06</span>ניוון או התפתחות</div></div></div>
+</section>
+<section class="slide " data-sn="4.2">
+<h2>רופאים <span class="r">כדוגמה</span></h2><div class="wall c2"><div class="shot f"><img src="assets/shots/doc-ynet-crop.jpg" alt="כותרת בוויינט, מאי 2026: מהפכה בחדר המיון - מודל בינה מלאכותית מנצח רופאים באבחנה ובקביעת הטיפול"><div class="cap">וויינט &middot; מאי 2026</div></div><div class="shot f"><img src="assets/shots/doc-israelhayom-crop.jpg" alt="כותרת בישראל היום, 4.11.2026: 21 מקרים של דימום במוח פוספסו על ידי הרופאים - הבינה גילתה אותם בזמן"><div class="cap">ישראל היום &middot; 4.11.2026</div></div><div class="shot f"><img src="assets/shots/doc-bizportal-crop2.jpg" alt="כותרת בביזפורטל, 24.10.2026: בינה מלאכותית שמאבחנת פי שניים יותר טוב מרופאים"><div class="cap">ביזפורטל &middot; 24.10.2026</div></div><div class="shot f"><img src="assets/shots/doc-euronews-crop.jpg" alt="כותרת ביורוניוז באנגלית, 6.2.2026: בינה מלאכותית עשויה לעזור לגלות מוקדם יותר סרטן שד אגרסיבי"><div class="cap">יורוניוז &middot; 6.2.2026</div></div></div>
+</section>
+<section class="slide " data-sn="4.3">
+<h2>מה מאחורי <span class="r">הכותרות</span></h2><p class="sub">כל פס מראה באיזה אחוז מהמקרים הגיעו לאבחנה הנכונה</p><div class="bars"><div class="grp f"><div class="gt">חדר מיון בבוסטון: 76 מטופלים אמיתיים, בשלב המיון הראשוני</div><div class="gd">המודל קרא את אותה רשומה רפואית שהייתה מול הרופאים. נספרה אבחנה נכונה או קרובה מאוד, ומי שבדק לא ידע מי כתב אותה</div><div class="row"><span class="lab">המודל</span><div class="track"><div class="fill hi" style="--w:67%">67%</div></div></div><div class="row"><span class="lab">רופא בכיר ברפואה פנימית</span><div class="track"><div class="fill" style="--w:55%">55%</div></div></div><div class="row"><span class="lab">רופא בכיר נוסף</span><div class="track"><div class="fill" style="--w:50%">50%</div></div></div></div><div class="grp f"><div class="gt">304 מקרי אבחון קשים במיוחד, מכתב עת רפואי</div><div class="gd">המודל מול רופאים כלליים שנעזרו בספרים ובאינטרנט</div><div class="row"><span class="lab">המודל</span><div class="track"><div class="fill hi" style="--w:83%">83%</div></div></div><div class="row"><span class="lab">רופאים, עם ספרים ואינטרנט</span><div class="track"><div class="fill" style="--w:36%">36%</div></div></div></div></div>
+<div class="src">סיינס, 30.4.2026 (הרווארד ובית החולים בית ישראל); סיינס, 22.10.2026 (מיקרוסופט)</div>
+</section>
+<section class="slide sep" data-sn="9.1">
+<div class="logo-card"><img src="assets/bio/logo-trim.png" alt="הלוגו של תום הגלעדי"></div><div class="sq-art" aria-hidden="true"><i class="s1"></i><i class="s2"></i><i class="s3"></i><i class="s4"></i><i class="s5"></i></div><div class="septx"><h2>ניוון <span class="r">או התפתחות?</span></h2><p class="sepsub">עוד מאותו הדבר, או סיפור חדש?</p><div class="agenda"><div class="it"><span class="n">01</span>התא המשפחתי</div><div class="it"><span class="n">02</span>היקשרות רגשית</div><div class="it"><span class="n">03</span>מכוניות אוטונומיות</div><div class="it"><span class="n">04</span>האינטראקציה עם הידע</div><div class="it"><span class="n">05</span>בעיית הסמכות</div><div class="it act"><span class="n">06</span>ניוון או התפתחות</div></div></div>
+</section>
+<section class="slide " data-sn="9.2">
+<div class="kicker">וושינגטון, אפריל 1986</div><h2>המורים שהפגינו <span class="r">נגד המחשבון</span></h2><div class="wide-im"><img src="assets/img/calculator-protest.jpeg" alt="קטע עיתון ישן: מורים למתמטיקה מפגינים נגד השימוש במחשבון" class="shadow"></div>
+</section>
+<section class="slide " data-sn="9.3">
+<div class="split phd"><div class="tx"><div class="kicker">לפני כ-2,400 שנה</div><h2>אפלטון, <span class="r">"פיידרוס"</span></h2><p class="quote f">הכתב יביא שכחה, ויעניק את <span class="r">מראית העין</span> של החוכמה.</p><img class="phd-cover" src="assets/img/pull/phaedrus-cover.jpg" alt="כריכת הספר פיידרוס של אפלטון, בעברית"></div><div class="im"><img class="phd-text shadow" src="assets/img/pull/phaedrus-text.png" alt="עמוד מתוך פיידרוס: הקטע על הכתב שמביא שכחה"></div></div>
+</section>
+<section class="slide " data-sn="9.4">
+<h2>וייז, מחשבון <span class="r">וטלפון</span></h2><div class="tools3"><img src="assets/img/pull/tool-b.png" alt="הסמל של וייז"><img src="assets/img/pull/tool-a.jpg" alt="מחשבון כיס"><img src="assets/img/pull/tool-c.jpg" alt="שלושה טלפונים חכמים"></div><p class="f closing center">שחררנו את הניווט, החישוב <span class="r">והזיכרון</span></p>
+</section>
+<section class="slide " data-sn="9.5">
+<div class="split flip"><div class="tx"><div class="kicker">גיקטיים, 11.9.2025</div><h2>והפעם: <span class="r">חצי שעה</span> בלי הכלי</h2><ul class="dots"><li class="f">הכלי נפל לחצי שעה בלבד</li><li class="f">ומפתחים כתבו: "חזרתי לכתוב קוד <span class="r">כמו איש מערות</span>"</li></ul></div><div class="im"><img src="assets/shots/geektime-crop2.jpg" alt="כתבה בגיקטיים, 11.9.2025: הכלי נפל לחצי שעה, ומפתחים כתבו שחזרו לכתוב קוד כמו איש מערות" class="shadow"></div></div>
+</section>
+<section class="slide " data-sn="9.6">
+<h2>אותו כלי, <span class="r">שני מסלולים</span></h2><div class="paths"><div class="path short f"><h4>מסלול הקיצור</h4><ul><li>נכנסים כדי להיפטר מהר מהמטלה</li><li>מבקשים תוצר</li><li>מעתיקים, ויוצאים</li></ul><div class="res">החשיבה נשארת בחוץ</div></div><div class="path think f"><h4>מסלול החשיבה</h4><ul><li>נכנסים כדי ליצור משהו גדול מסך חלקיו</li><li>הלוך ושוב, עד שהתוצר באמת מספק</li><li>האדם מעורב לאורך כל הדרך</li></ul><div class="res">החשיבה מתעצמת</div></div></div><p class="f closing center">אותו כלי בדיוק. <span class="r">הכוונה</span> שאיתה נכנסים לשיחה קובעת את המסלול.</p>
+</section>
+<section class="slide " data-sn="9.7">
+<h2>המוטיבציה <span class="r">מכריעה</span></h2><div class="paths"><div class="path short f"><h4>כשאין מוטיבציה ללמוד</h4><div class="huge">הבינה = כלי עקיפה</div></div><div class="path think f"><h4>כשיש מוטיבציה ללמוד</h4><div class="huge">הבינה = מנוע צמיחה</div></div></div><p class="f closing center">או במילים אחרות: <span class="r">זה תלוי בנו</span></p>
+</section>
+<section class="slide vid vert" data-sn="4.5">
+<div class="vsplit"><div class="tx"><h2>הבינה כמראה - <span class="r">שנשלטת על ידי עמק הסיליקון</span></h2><p class="sub">פרופ' זהר אליוסף, פסיכולוג חינוכי שחוקר את הממשק בין בינה מלאכותית לבריאות הנפש</p></div><div class="vv"><video aria-label="סרטון: הבינה כמראה - שנשלטת על ידי עמק הסיליקון" class="" src="assets/video/mirror-elyoseph.mp4" poster="assets/raw/posters/mirror-elyoseph.jpg" controls preload="metadata" playsinline></video></div></div>
+</section>
+<section class="slide " data-sn="10.1">
+<div class="split"><div class="tx"><h1>הבינה יכולה לעשות <span class="r">כמעט הכל</span></h1><p class="f lead">השאלה היא מה אנחנו עדיין <span class="r">רוצים לעשות בעצמנו</span></p></div><div class="im two"><img src="assets/img/human-knowledge-a.jpeg" alt="צילום: מדרגות עץ בחצר, שנבנו ביד"><img src="assets/img/human-knowledge-b.jpeg" alt="צילום: מסור גרונג חדש, ולידו חוברת ההוראות שלו"></div></div>
+</section>
+<section class="slide " data-sn="10.2">
+<div class="split"><div class="tx mid col"><img src="assets/bio/logo-trim.png" alt="הלוגו של תום הגלעדי" style="width:420px"><h1 style="margin-top:26px">תודה</h1><p class="lead dim">תום הגלעדי</p></div><div class="im"><img src="assets/bio/linktree-qr.png" alt="קוד קיו-אר לדף הקישורים של תום הגלעדי" style="max-height:460px"></div></div>
+</section>
+</div></div>
+</main><div id="bar"></div><div id="num"></div><nav class="deck-nav" aria-label="ניווט במצגת"><button type="button" id="nav-prev">הקודם</button><button type="button" id="nav-next">הבא</button></nav><a class="a11y-link" href="../accessibility.html">הצהרת נגישות</a><div id="live" class="sr-only" aria-live="polite"></div>
+<script>
+
+(function(){
+  if(location.search.indexOf('qa')>=0) document.body.classList.add('qa');
+  const deck=document.getElementById('deck'), slides=[...deck.querySelectorAll('.slide')];
+  const bar=document.getElementById('bar'), num=document.getElementById('num');
+  let si=0, fi=0, lockHash=false, lastSi=-1; const live=document.getElementById('live');
+  deck.querySelectorAll('video[data-end]').forEach(v=>{ const end=parseFloat(v.dataset.end);
+    v.addEventListener('timeupdate',()=>{ if(v.currentTime>=end){ v.pause(); } }); });
+  // a clip started any way (key, click on the slide, or a click on the clip itself) counts as played,
+  // and the other clips on that slide pause - so the order stays right (Tom 6.11)
+  deck.querySelectorAll('video').forEach(v=>{ v.addEventListener('play',()=>{ v.dataset.played='1'; v.blur();
+    v.closest('.slide').querySelectorAll('video').forEach(o=>{ if(o!==v) o.pause(); }); }); });
+  function frags(){ return [...slides[si].querySelectorAll('.f')]; }
+  function render(){
+    slides.forEach((s,i)=>s.classList.toggle('on', i===si));
+    frags().forEach((f,i)=>f.classList.toggle('vis', i<fi));
+    bar.style.width=((si+1)/slides.length*100)+'%';
+    num.textContent=(si+1)+' / '+slides.length; if(si!==lastSi){ lastSi=si; live.textContent='שקופית '+(si+1)+' מתוך '+slides.length; }
+    
+    lockHash=true; location.hash=(si+1); setTimeout(()=>{lockHash=false;},0);
+    deck.querySelectorAll('video').forEach(v=>{ if(!v.closest('.slide').classList.contains('on')) v.pause(); });
+  }
+  function next(){
+    const vids=[...slides[si].querySelectorAll('video')];
+    const v=vids.find(x=>!x.dataset.played);                    // each video plays on its own advance
+    if(v){ v.dataset.played='1'; vids.forEach(o=>{ if(o!==v) o.pause(); });
+      v.muted=false; v.volume=1;                                 // always with sound (Tom 6.11)
+      const p=v.play(); if(p && p.catch) p.catch(()=>{ delete v.dataset.played; });   // refused? retry the SAME clip next click
+      return; }
+    if(fi<frags().length){ fi++; } else if(si<slides.length-1){ si++; fi=0; }
+    render();
+  }
+  function prev(){ if(fi>0){ fi--; } else if(si>0){ si--; fi=frags().length; } render(); }
+  function goto(n){ si=Math.max(0,Math.min(slides.length-1,n)); fi=frags().length; render(); }
+  // Hebrew deck reads right-to-left: LEFT = forward, RIGHT = back (Tom, 3.10.2026)
+  // keys always drive the deck, even after a mouse click put the focus on a clip (6.11: the focused clip used to
+  // swallow LEFT as "rewind 5 s"); preventDefault below also stops the clip's own key handling
+  document.addEventListener('keydown', e=>{ if((e.key===' '||e.key==='Enter') && e.target.closest && e.target.closest('a,button')) return;
+    switch(e.key){
+      case 'ArrowLeft': case 'PageDown': case ' ': case 'Enter': e.preventDefault(); next(); break;
+      case 'ArrowRight': case 'PageUp': case 'Backspace': e.preventDefault(); prev(); break;
+      case 'ArrowDown': e.preventDefault(); goto(si+1); break;
+      case 'ArrowUp': e.preventDefault(); goto(si-1); break;
+      case 'Home': e.preventDefault(); goto(0); break;
+      case 'End': e.preventDefault(); goto(slides.length-1); break;
+      case 'f': case 'F': document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen(); break;
+      
+    }
+  });
+  deck.addEventListener('click', e=>{ if(e.target.closest('video')) return; next(); }); document.getElementById('nav-next').addEventListener('click', ()=>next()); document.getElementById('nav-prev').addEventListener('click', ()=>prev());
+  addEventListener('hashchange', ()=>{ if(lockHash) return; const n=parseInt(location.hash.slice(1)); if(n>=1&&n<=slides.length){ si=n-1; fi=0; render(); } });
+  const stage=document.getElementById('stage'); function fit(){ deck.style.transform='scale('+Math.min(stage.clientWidth/1280, stage.clientHeight/720)+')'; }
+  addEventListener('resize', fit); fit();
+  const start=parseInt(location.hash.slice(1)); if(start>=1&&start<=slides.length){ si=start-1; }
+  render();
+})();
+
+
+</script>
+</body>
+</html>
